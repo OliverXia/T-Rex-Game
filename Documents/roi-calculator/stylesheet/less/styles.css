@@ -1,0 +1,28 @@
+.qMark {
+  bottom: 0.1111111%;
+  right: 2.0833333%;
+  position: fixed;
+  opacity: 0.5;
+}
+.qMark:hover {
+  opacity: 1;
+}
+button.btn-red {
+  background-color: #EF3D35;
+  border: none;
+  box-shadow: none;
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+}
+button.btn-red:hover {
+  color: white;
+  background-color: #fc544e;
+}
+a.btn-solution {
+  z-index: 50;
+  color: white;
+  background-color: #07A4DF;
+}
+a.btn-solution:hover {
+  color: white;
+  background-color: #EF3D35;
+}

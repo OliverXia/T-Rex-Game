@@ -1,0 +1,299 @@
+@import "animation.less";
+
+/* updated PR */
+
+// 
+// Make the "viewport" take up the entire screen 
+body, html {
+  background: #58585a;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.metricsBtn {
+  border-radius: 3px;
+  color: white;
+  background-color: #535353;
+  &:hover {
+    background-color: lightgray;
+  }
+}
+
+.icon-for-links{
+  padding-right: 0.5em;
+}
+
+.icon-for-metrics {
+  padding-left: 0.5em;
+}
+
+.viewport {
+  overflow: hidden;
+}
+
+.masthead-container { 
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.smaller-funnel {
+  max-width: 90%;
+}
+
+.intro-transitions {
+  .transition(2s, margin-top);
+}
+
+.pull-up-all-content {
+  margin-top: 4.15em;
+}
+
+.force-left {
+  margin-left: -5%;
+}
+
+#intro.animate-out {
+  margin-top: -850px;
+}
+
+#intro {
+  height: 100%;
+}
+
+.intro-middle-page { 
+  background: #FFF;
+  padding-top: 2.5em;
+}
+
+#secondBizoLogo{
+  padding-top: 2px;
+}
+
+.arrow-padding {
+  margin-top: 1.5em;
+}
+
+#centerColumn {
+  margin-top: 0em;
+  position: relative;
+}
+
+.caseStudies {
+  img {
+    display: block;
+    filter: gray;
+    -webkit-filter: grayscale(100%);
+
+    &:hover {
+      filter: none;
+      -webkit-filter: none;
+    }
+  }
+}
+
+.percentage {
+  background-color: #00a5dc;
+  height: 50px !important;
+  width: 50px !important;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 100%;
+  margin: 10px 0;
+}
+.percentage2 {
+  background-color: #00a5dc;
+  height: 80px !important;
+  width: 80px !important;
+  line-height: 80px;
+  text-align: center;
+  border-radius: 100%;
+  margin: 10px 0;
+}
+
+
+.signal {
+  position: relative;
+  top: .10em;
+  color: white;
+}
+
+h4 {
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.white-text{
+  color: white;
+}
+
+.white-text-introheader { 
+  display: block; 
+  color: white;
+  font-size: 34px;
+  padding: 10px 0 40px 0;
+  }
+  .white-text-introheader span.tm { 
+    vertical-align: 75%;
+    line-height: 20px;
+    font-size: 10px;
+    }
+
+  .white-text-introbutton{ color: #FFF; }
+
+.icon-padding{
+  padding-left: 0.5em;
+}
+
+.Text {
+  /*color: #00678A;*/
+  color: white;
+  text-align: left;
+  padding-left: 15px;
+  padding-right: 15px;
+} 
+
+.title-header-mid { 
+  color: #fff;
+  background: #00AEE9;
+  width: 100%;
+  text-align: center;
+  padding: .2em; 
+}
+
+.title-header { 
+  background-color: #ec342e;
+  width: 100%;
+  padding: 10px 0; 
+}
+
+.intro-title-header-mid { 
+  color: #fff;
+  background: #00AEE9;
+  width: 100%;
+  text-align: center;
+  padding: 40px 0;
+}
+
+.gray-section {
+  background-color: lightgray;
+  text-align: center;
+  padding: 60px;
+  }
+
+.gray-section-text { 
+  font-size: 32px;
+  font-weight: 300;
+  color: #666;
+  margin: 0 0 30px 0; 
+  }
+  .gray-section p { font-size: 18px; line-height: 26px; color: #666; }
+
+.bottom-header { 
+  color: #fff;
+  background: #58585a;
+  width: 100%;
+  padding: 25px;
+  bottom: 0em;
+  position: relative;
+}
+
+.mega-block-btn {
+  border: 0;
+  background-color: #44c8f8;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  &:hover{
+    background-color: #00AEE9;
+    cursor: pointer;
+  }
+}
+
+.mega-block-btn.active {
+  background-color: #00AEE9;
+}
+
+.get-started-btn {
+  background-color: #76D1F0;
+  text-align: center;
+  border-radius: 5px;
+  &:hover{
+    background-color: #44c8f8;
+    cursor: pointer;
+  }
+}
+
+.get-started-btn.active {
+  background-color: #44c8f8;
+}
+
+.menu-bar {
+  background: #44c8f8;
+  color: #fff;
+  width: 100%;
+}
+
+.padding-left-chunks {
+  padding-bottom: 3em;
+}
+.padding-left-chunks .solutions { font-size: 14px; display: block: background: pink; }
+
+.helper-button {
+  height: 40px !important;
+  width: 40px !important;
+  border-radius: 100%;
+  background-color: #00a5dc;
+  text-align: center;
+  line-height: 50px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.question-img {
+  max-width: 2.5em;
+}
+
+.margin {
+  @height: -10px;
+  margin-top: @height;
+  }
+
+
+.introTextBorder {
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0px 0px 3px 3px rgba(0,0,0,.2);
+  padding: 10px;
+  border-radius: 10px;
+  }
+
+.fading {
+  opacity: 0;
+  .transition;
+
+  &.delay-3s {
+    .transition-delay(3s);
+  }
+
+  &.delay-2s {
+    .transition-delay(2s);
+  }
+}
+
+.contact-modal {
+  text-align: center;
+  cursor: pointer;
+  }
+
+
+
+
+

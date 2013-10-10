@@ -1,0 +1,755 @@
+<!DOCTYPE HTML>
+<html ng-app="B2BTargetedTool">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+    <title>B2B Targeted Display Advertising Impact Tool</title>
+    <link href="http://media.bizo.com/bizstrap/css/bizstrap-rc.css" rel="stylesheet">
+    <link rel="stylesheet/less" type="text/css" href="css/styles.less" />
+    <script src="javascript/less.js" type="text/javascript"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="http://media.bizo.com/bizstrap/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
+    <script src="javascript/controller.js"></script>
+    <script src="javascript/directives.js"></script>
+    <style>
+    /*-- new and re-written styles --*/
+    .btn-danger { 
+      background: #ef7e67; 
+      border: 0; 
+      padding: 10px 20px; 
+      font-size: 18px; 
+      font-weight: 300; 
+      box-shadow: 0;
+      border-radius: 3px;
+      }
+    .get-started-btn {
+      border: 0; 
+      padding: 15px 25px; 
+      font-size: 24px; 
+      font-weight: 300; 
+      box-shadow: 0;
+      }
+    .truths { 
+      color: #666;
+      line-height: 26px;
+      font-size: 18px; 
+      padding: 10px; 
+      }
+    .numbers { 
+      font-size: 30px; 
+      color: #FFF; 
+      }
+      .truth-header { font-size: 32px; line-height: 34px; padding: 20px 0 20px 110px; }
+      font.subhead { margin-bottom: 10px; display: block;}
+      .solutions-block { display: block; font-size: 14px; line-height: 24px; }
+      .metricsBtn { border: 0; padding: 8px 15px; }
+      .funnel-1 { margin: 20px 20px 40px 110px; padding: 0; }
+    </style>
+  </head>
+
+  <body ng-controller="Controller"> 
+
+    <div id="viewport" class="viewport" resize>
+
+       <div id="intro" slide-up-on="intro-hidden">
+
+        <!-- The intro page's top red bar -->
+        <div class="title-header">
+          <div class="row-fluid">
+            <div class="span9">
+              <div class="row-fluid">
+                <div id="secondBizoLogo" class="offset2">
+                  <img src="images/secondBizo.png" alt="BizoLogoWithText"/>
+                </div>
+              </div>
+            </div>
+            <div class="span3">
+              <div style="padding : 5px">
+                <button class="btn btn-danger">
+                  <div href="#contactModal" role="button" data-toggle="modal">               
+                    Contact Us
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End of the top red bar of the intro page -->
+
+        <!-- Start of the second dark blue header bar -->
+        <div class="intro-title-header-mid">
+          <div class="white-text-introheader">Ready to embrace the Funnelmentals<span class="tm">&trade;</span> of B2B Marketing?
+          </div>
+          <button class="get-started-btn btn" ng-show="!introHidden" ng-click="hideIntro()">
+            <div class="white-text-introbutton">See how &#8595;</div>
+          </button>
+        </div>
+        <!-- End of the second dark blue header bar -->
+
+        <!-- Start of the middle white section with text and funnel -->
+        <div class="intro-middle-page">
+          <div class="row-fluid">
+            <div class="offset1 span6" style="background: white; padding: 0 0 20px 100px;">
+              
+              <div class="truth-header">We hold these B2B truths to be self evident:</div>
+              
+              <div class="span12" style="padding-bottom: 0.5em; margin: 10px 0 10px 110px;">
+                <div class="percentage span2">
+                  <div class="numbers">1</div>
+                </div>
+                <div class="span10 truths">Thanks to the Web, your prospects are in total control of when and how they learn about solutions to their problems.</div>
+              </div>
+              
+              <div class="span12" style="padding-bottom: 0.5em; margin: 10px 0 10px 110px;">
+                <div class="percentage span2">
+                  <div class="numbers">2</div>
+                </div>
+                <div class="span10 truths">Your sales team won't have a chance to engage prospects until they're much closer to making a decision.</div>
+              </div>
+              
+              <div class="span12" style="padding-bottom: 0.5em; margin: 10px 0 10px 110px;">
+                <div class="percentage span2">
+                  <div class="numbers">3</div>
+                </div>
+                <div class="span10 truths">Marketing can fill the gap with a "full-funnel" marketing approach: reach and educate prospects early, often, and throughout the buying process.</div>
+              </div>
+            </div>
+            <div class="span3" style="background:white;">
+              <img src="images/funnel_whole.png" class="funnel-1" />
+            </div>
+          </div>
+        </div>
+        <!-- End of the middle white section -->
+
+        <!-- The gray part of the intro page -->
+        <div class="gray-section">
+          <div class="gray-section-text"><strong>What's a "full funnel marketing" strategy all about?</strong></div>
+          <p>Employing the right mix of programs based on the key objectives at each stage of the funnel.</p>
+          <p>Online display advertising gives B2B marketers a uniquely versatile channel to make an impact on every stage of the marketing funnel.</p>
+          <p style="padding-bottom : 2em">Use Bizo's Display Strategy Builder to learn how online display advertising can help you achieve your funnel goals.</p>
+          <button class="get-started-btn btn" ng-show="!introHidden" ng-click="hideIntro()">
+            <div class="white-text-introbutton">See how &#8595;</div>
+          </button>
+        </div>
+        <!-- end of the gray part of the intro page -->
+
+        <!-- Start of the bottom-header for the intro page -->
+        <div class="bottom-header">
+          <div class="row-fluid">
+            <div class="span4">
+              <div class="row-fluid offset2">
+                <img src="images/secondBizo.png" alt="BizoLogoWithText"/>
+              </div>
+            </div>
+            <div class="span4">
+              <div class="row-fluid offset2">
+                <div class="helper-button span2">
+                  <a href="#helpModal" data-toggle="modal">
+                    <i class="icon-book icon-2x icon-muted"></i>
+                  </a>
+                </div>
+                <a href="#helpModal" data-toggle="modal" class="span10" style="margin-top : 0.7em">
+                  <font Size="2" style="color : white">What is full-funnel marketing?</font> 
+                </a>
+              </div>
+            </div>
+            <div class="span4">
+              <a class="offset1" href="http://bizo.com/marketer/comparison">
+                <button class="btn btn-danger">
+                  Ready to get started?
+                </button>
+              </a>  
+            </div>
+          </div>
+        </div>
+        <!-- End of the bottom-header -->
+      </div>
+
+      <div id="contentPage" content-resize="intro-hidden"  style="background: #FFF;">
+
+        <!-- Start of the red header bar -->
+        <div class="title-header">
+          <div class="row-fluid">
+            <div class="span9">
+              <div class="row-fluid">
+                <div id="secondBizoLogo" class="offset2">
+                  <img src="images/secondBizo.png" alt="BizoLogoWithText"/>
+                </div>
+              </div>
+            </div>
+            <div class="span3">
+              <div style="padding : 5px">
+                <button class="btn btn-danger">
+                  <div href="#contactModal" role="button" data-toggle="modal">                 
+                    Contact Us
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End of the red header bar -->
+
+        <!-- Start of the second dark blue header bar -->
+        <div class="intro-title-header-mid">
+          <div class="white-text-introheader">Bizo's Display Strategy Builder</div>
+          <font size="3">To identify the right display strategies for you, tell us your marketing goals:</font>
+        </div>
+        <!-- End of the second dark blue header bar -->
+
+        <!-- start of button toolbar / marketing questions bar -->
+        <div class="menu-bar">
+          <div class="container-fluid">
+            <div class="row-fluid"> 
+              <div class="span4">
+                <div class="mega-block-btn btn" ng-class="topFunnel.getButtonClass()" ng-click="topFunnel.toggle()">
+                  <i class="icon-comments-alt icon-white" style="font-size : 5em"></i>
+                  <h4 class="white-text">Build Brand Awareness</h4>
+                </div>
+              </div>
+              <div class="span4">
+                <div class="mega-block-btn btn" style="border-left: 1px dashed #FFF;" ng-class="midFunnel.getButtonClass()" ng-click="midFunnel.toggle()">
+                  <i class="icon-group icon-white" style="font-size : 5em"></i>
+                  <h4 class="white-text">Increase audience Engagement</h4>
+                </div>
+              </div>
+              <div class="span4">
+                <div class="mega-block-btn btn"  style="border-left: 1px dashed #FFF;" ng-class="bottomFunnel.getButtonClass()" ng-click="bottomFunnel.toggle()">
+                  <i class="icon-signin icon-white" style="font-size: 5em"></i>
+                  <h4 class="white-text">Increase Conversions</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end of button bar -->
+
+        <div class="container-fluid pull-up-all-content" style="margin-bottom: 40px;">
+
+          <!-- First row of the second page -->
+          <div class="row-fluid">
+            <div class="span4">
+              <div class="padding-left-chunks" fade-when="topFunnel.visible">
+                <font size="4" class="subhead">Build brand awareness using:</font>
+                <div class="solutions-block">
+                  <div> <a href="#bizDemoTargetModal" data-toggle="modal" ><i class="icon-group icon-for-links"></i>Business Demographic Targeting</a></div>
+                  <div> <a href="#companyTargetModal" data-toggle="modal" ><i class="icon-building icon-for-links"></i>Company Targeting</a> </div>
+                  <div> <a href="#videoTargetModal" data-toggle="modal" ><i class="icon-facetime-video icon-for-links"></i>Video Targeting</a></div>  
+                  <br />  
+                  <div class="metricsBtn btn" data-target="#topSolutionsModal" data-toggle="modal">Show success metrics<i class="icon-double-angle-right icon-for-metrics icon-muted"></i></div>
+                </div>
+              </div>
+            </div>
+            <div class="span4">
+              <img src="images/funnel-1.png" style="max-height : 180px; padding-bottom : 10px" fade-when="topFunnel.visible" start-opacity="0.1" alt="TopFunnel"/> 
+              <div fade-when="topFunnel.visible"></div>
+            </div>
+            <div class="span4">
+              <div class="caseStudies">
+                <div class="delay-3s" fade-when="topFunnel.visible">
+                  <font size="4" class="subhead">Results: brand recall lifted</font>
+                  <div class="row-fluid">
+                    <div class="percentage2 span2" style="margin:0 10px 0 0;"><font size="6" style="color : white">21%</font></div>
+                    <div class="span8">
+                      <a href="http://b2bmarketing.bizo.com/LP=85?elqCampaignId=810" target="_blank">
+                        <img src="images/zuora-logo.png" alt="ZuoraLogo" style="margin-bottom: 10px;" />
+                      </a>  
+                      <p>
+                        Zuora saw a <strong>21% lift in brand recall</strong> from their target audiences
+                        <a href="http://b2bmarketing.bizo.com/LP=85?elqCampaignId=810" target="_blank">Learn more &raquo;</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Close the first row of the second page -->
+
+          <!-- Second row of the second page -->
+          <div class="row-fluid" style="margin: 20px 0;">
+            <div class="span4">
+              <div class="padding-left-chunks" fade-when="midFunnel.visible">
+                <font size="4" class="subhead">Increase engagement using:</font>
+                <div class="solutions-block">
+                  <div><a href="#bizDemo2TargetModal" data-toggle="modal" ><i class="icon-group icon-for-links"></i>Business Demographic Targeting</a></div>
+                  <div><a href="#facebookTargetModal" data-toggle="modal" ><i class="icon-facebook-sign icon-for-links"></i>Facebook Targeting</a></div>
+                  <div><a href="#linkedInTargetModal" data-toggle="modal" ><i class="icon-linkedin-sign icon-for-links"></i>LinkedIn Targeting</a></div>
+                  <br />
+                  <div class="btn metricsBtn" data-target="#midSolutionsModal" data-toggle="modal">Show success metrics<i class="icon-double-angle-right icon-for-metrics icon-muted"></i></div>
+                </div>
+              </div>
+            </div>
+            <div class="span4">
+              <img src="images/funnel-2.png" style="max-height : 180px; padding-bottom : 10px" fade-when="midFunnel.visible" start-opacity="0.1" class="middle-funnel" alt="MiddleFunnel"/> 
+              <div fade-when="middleFunnel.visible" style="position: relative; top: .2em"></div>
+            </div>
+            <div class="span4">
+              <div class="caseStudies">
+                <div class="delay-3s" fade-when="midFunnel.visible">
+                  <font size="4" class="subhead">Results: increased brand search traffic</font>
+                  <div class="row-fluid">
+                    <div class="percentage2 span2" style="margin:0 10px 0 0;"><font size="6" style="color : white">97%</font></div>
+                    <div class="span8">
+                      <a href="http://b2bmarketing.bizo.com/LP=85?elqCampaignId=810" target="_blank">
+                       <img src="images/edible-arrangements-logo.png" alt="EdibleArrangementsLogo" style="margin-bottom: 10px;" />
+                      </a>  
+                      <p>
+                        True Media's campaign with Edible Arrangements generated a <strong>97% increase in branded search traffic</strong>
+                        <a href="http://b2bmarketing.bizo.com/LP=85?elqCampaignId=810" target="_blank">Learn more &raquo;</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>    
+            </div>
+          </div>
+          <!-- Close the second row of the second page -->
+
+          <!-- Third row of the second page -->
+          <div class="row-fluid">
+            <div class="span4">
+              <div fade-when="bottomFunnel.visible">
+                <font size="4" class="subhead">Increase conversions using:</font>
+                <div class="solutions-block">
+                  <div><a href="#websiteTargetModal" data-toggle="modal" ><i class="icon-repeat icon-for-links"></i>Website Retargeting</a></div>
+                  <div><a href="#crmTargetModal" data-toggle="modal" ><i class="icon-zoom-in icon-for-links"></i>CRM Retargeting</a></div>
+                  <div><a href="#keywordTargetModal" data-toggle="modal" ><i class="icon-screenshot icon-for-links"></i>Keyword Targeting</a></div> 
+                  <br />
+                  <div class="metricsBtn btn" data-target="#bottomSolutionsModal" data-toggle="modal">Show success metrics<i class="icon-double-angle-right icon-for-metrics icon-muted"></i></div>
+                </div>
+              </div>
+            </div>
+            <div class="span4">
+              <img src="images/funnel-3.png" style="max-height : 180px; padding-bottom : 10px" fade-when="bottomFunnel.visible" start-opacity="0.1" class="bottom-funnel" alt="BottomFunnel"/>
+            </div>
+            <div class="span4">
+              <div class="caseStudies">
+                <div class="delay-3s" fade-when="bottomFunnel.visible">
+                  <font size="4" class="subhead">Results: increased conversion rates</font>
+                  <div class="row-fluid">
+                    <div class="percentage2 span2" style="margin:0 10px 0 0;"><font size="5" style="color: white">200%</font></div>
+                    <div class="span8">
+                      <a href="http://b2bmarketing.bizo.com/LP=85?elqCampaignId=810" target="_blank">
+                        <img src="images/up-sell-it-logo.png" alt="UpSellItLogo" style="margin-bottom: 10px;" />
+                      </a>  
+                      <p>
+                        UpSellit's conversion rates thru retargeting were <strong>200% higher</strong> than that of PPC traffic
+                        <a href="http://b2bmarketing.bizo.com/LP=85?elqCampaignId=810" target="_blank">Learn more &raquo;</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- Close the third row of the second page -->
+        </div>  <!-- Close container fluid  -->
+
+        <!-- The bottom gray header with the get started button -->
+        <div class="bottom-header">
+          <div class="row-fluid">
+            <div class="span4">
+              <div class="row-fluid offset2">
+                <img src="images/secondBizo.png" alt="BizoLogoWithText"/>
+              </div>
+            </div>
+            <div class="span4">
+              <div class="row-fluid offset2">
+                <div class="helper-button span2">
+                  <a href="#helpModal" data-toggle="modal">
+                    <i class="icon-book icon-2x icon-muted"></i>
+                  </a>
+                </div>
+                <a href="#helpModal" data-toggle="modal" class="span10" style="margin-top : 0.7em">
+                  <font Size="2" style="color: white">What is full-funnel marketing?</font> 
+                </a>
+              </div>
+            </div>
+            <div class="span4">
+              <a class="offset1" href="http://bizo.com/marketer/comparison">
+                <button class="btn btn-danger">
+                  Ready to get started?
+                </button>
+              </a>  
+            </div>
+          </div>
+        </div>
+      </div> <!-- Close #contentPage -->
+
+      <!-- Start of modals -->
+
+      <!-- HELP Modal -->
+      <div id="helpModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="helpModalLabel" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+          <h3 id="helpModalLabel">What is full-funnel marketing?</h3>
+        </div>
+        <div class="modal-body">
+          <p>The marketing funnel represents the buyer's journey from initial brand discovery and awareness, education and content engagement, through to conversion and purchase. </p>
+          <p>Top-, mid-, and bottom-funnel display advertising strategies each play distinct roles in the marketing funnel with specific objectives and metrics, working in harmony to make a big marketing impact..</p>
+          <p><strong>Top of the funnel:</strong> reach precise business audiences wherever they are online to increase awareness and recall of your company and products. The goal is to convey what your company does, why your products are unique, and why prospects should care about your company.</p>
+          <p><strong>Mid-funnel:</strong> educate, and influence prospects after they are aware of your brand, but before they are necessarily ready to engage with a sales rep - or before they are even ready to share their personal information (e.g., via a Web form).</p>
+          <p><strong>Bottom of the funnel:</strong> convert prospects into leads and customers. With the awareness-building and nurturing work you have done higher up in the funnel, you should now have a healthy, growing pool of target prospects that are ready to share information, check out your free trial and possibly engage with your sales team.</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+        </div>
+      </div>
+
+      <!-- Top solutions modal and also product description modal -->
+      <div id="bizDemoTargetModal" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+          <h3>Business Demographic Targeting</h3>
+        </div>
+        <div class="modal-body">
+          Target audiences online using business demographic data such as company size, job function, title, and industry.
+        </div>
+        <div class="modal-footer">
+          <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+        </div>
+      </div>
+
+      <div id="companyTargetModal" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+          <h3>Company Targeting</h3>
+        </div>
+        <div class="modal-body">
+          Target professionals from a defined list of target accounts. Nurture influencers as well as decision makers across the accounts that matter most." 
+        </div>
+        <div class="modal-footer">
+          <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+        </div>
+      </div>
+
+      <div id="videoTargetModal" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+          <h3>Video Targeting</h3>
+        </div>
+        <div class="modal-body">
+          Use high-quality video to reach specific business audiences.
+        </div>
+        <div class="modal-footer">
+          <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+        </div>
+      </div>
+
+      <div id="bizDemo2TargetModal" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+          <h3>Business Demographic Targeting</h3>
+        </div>
+        <div class="modal-body">
+          Target precise audiences online using business demographic data such as job function and seniority on over 120 million business professionals, enabling you to reach your target audiences with precision, wherever they travel across the business web.
+        </div>
+        <div class="modal-footer">
+          <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+        </div>
+      </div>
+
+      <div id="facebookTargetModal" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+          <h3>Facebook Targeting</h3>
+        </div>
+        <div class="modal-body">
+          Combine B2B audience data with Facebook's incredible scale to reach your target business audiences on Facebook, and precisely target them based on B2B-focused criteria such as title, seniority, industry, company size, and more.
+        </div>
+        <div class="modal-footer">
+          <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+        </div>
+      </div>
+
+      <div id="linkedInTargetModal" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+          <h3>LinkedIn Targeting</h3>
+        </div>
+        <div class="modal-body">
+          Put your brand, messages, and offers in front of key decision makers, influential professionals, and affluent consumers on LinkedIn. Connect with your prospects while they network, and precisely target LinkedIn members based on criteria such as title, seniority, industry, and more.
+        </div>
+        <div class="modal-footer">
+          <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+        </div>
+      </div>
+
+      <div id="websiteTargetModal" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+          <h3>Website Retargeting</h3>
+        </div>
+        <div class="modal-body">
+          Target highly relevant display ads to prospects after they leave your website, landing pages, or corporate blog so you can bring &#34;lost&#34; prospects back, boosting lead conversion rates across your mix.
+        </div>
+        <div class="modal-footer">
+          <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+        </div>
+      </div>
+
+      <div id="crmTargetModal" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+          <h3>CRM Retargeting</h3>
+        </div>
+        <div class="modal-body">
+          Keep your brand, messages, and offers in front of your existing prospects, beyond their inbox. By targeting online display ads to leads you've already captured in your CRM or Marketing Automation system, this retargeting strategy gives you a powerful new way to nurture the highly qualified audiences already in your sights.
+        </div>
+        <div class="modal-footer">
+          <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+        </div>
+      </div>
+
+      <div id="keywordTargetModal" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+          <h3>Keyword Targeting</h3>
+        </div>
+        <div class="modal-body">
+          Combine search with display to reach audiences with display ads after they've performed a search using specific key terms. Catch your target audiences while they're thinking about relevant topics to make a timely impression.
+        </div>
+        <div class="modal-footer">
+          <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+        </div>
+      </div>      
+
+      <div id="topSolutionsModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="topSolutionsModalLabel" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+          <h3>Top-funnel success metrics:</h3>
+        </div>
+        <div class="modal-body">
+          <strong>Brand Recall:</strong> brand studies reveal the effect that display advertising has on your audience's familiarity with your brand.<br>
+          <strong>Share of Voice:</strong> your brand's exposure to a specific business audience relative to other advertisers who are bidding on the same audience.<br>
+          <strong>Targeted Reach:</strong> how many unique professionals in a specific target audience that you have access to via display advertising.<br>
+          <strong>Impressions Delivered against Target Audience:</strong> how many unique display ads are served to your target audience online."
+        </div>
+        <div class="modal-footer">
+          <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+        </div>
+      </div>
+
+      <!-- Mid funnel solutions modal -->
+      <div id="midSolutionsModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="midSolutionsModalLabel" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+          <h3>Mid-funnel success metrics:</h3>
+        </div>
+        <div class="modal-body">
+          <strong>Branded Search Lift:</strong> shows how display advertising impacts the number of website visitors who search specifically for your brand name in search engines.<br>
+          <strong>New Visitors:</strong> the number of new visitors that visit your website after being exposed to your display ads.<br>
+          <strong>Target Audience time on Site Lift:</strong> the increase in time spent on your website by your target audience.<br>
+          <strong>Page Views/Visits:</strong> the impact that display advertising has on the number of visits or page views on your website.<br>
+          <strong>Lift in Page Views per Visit:</strong> the increase in pages viewed per visit to your website as a result of display advertising.
+        </div>
+        <div class="modal-footer">
+          <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+        </div>
+      </div>
+
+      <!-- Bottom funnel solutions modal -->
+      <div id="bottomSolutionsModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="midSolutionsModalLabel" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+          <h3>Bottom-funnel success metrics:</h3>
+        </div>
+        <div class="modal-body">
+          <strong>Conversion Lift:</strong> display advertising's impact on website conversion rates.<br>
+          <strong>Leads:</strong> the number of leads generated by display advertising.<br>
+          <strong>Lead Quality:</strong> the quality of leads generated by display advertising.<br>
+          <strong>Opportunity Contribution:</strong> how many display advertising sourced leads turn into sales opportunities.<br>
+          <strong>Revenue Contribution:</strong> the amount of revenue directly attributable to display advertising
+        </div>
+        <div class="modal-footer">
+          <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+        </div>
+      </div>
+
+      <!-- CONTACT US Modal -->
+      <div id="contactModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+          <h3 id="contactModalLabel">Contact Bizo</h3>
+        </div>
+        <div class="modal-body">
+          <form method="post" name="contactFormAboutUs-1345667077094" action="https://s1695833911.t.eloqua.com/e/f2" id="form19" >
+
+              <input value="contactFormAboutUs-1345667077094" type="hidden" name="elqFormName"  />
+              <input value="1695833911" type="hidden" name="elqSiteId"  />
+              <input name="elqCampaignId" type="hidden"  />
+
+              <div id="formElement0" class="sc-view form-design-field sc-static-layout sc-regular-size">
+                <label>First Name:</label>
+                <div class="form-input-wrapper">
+                  <input id="field0" value="" type="text" name="firstName" tabIndex="1"  />
+                </div>
+              </div>
+
+              <div id="formElement1" class="sc-view form-design-field sc-static-layout sc-regular-size">
+                <label>Last Name:</label>
+                <div class="form-input-wrapper">
+                  <input id="field1" value="" type="text" name="lastName" tabIndex="2" />
+                </div>
+              </div>
+
+              <div id="formElement2" class="sc-view form-design-field sc-static-layout sc-regular-size">
+                <label>Email:</label>
+                <div class="form-input-wrapper">
+                  <input id="field2" value="" type="text" name="emailAddress" tabIndex="3" />
+                </div>
+              </div>
+
+              <div id="formElement3" class="sc-view form-design-field sc-static-layout sc-regular-size">
+                <label>Company:</label>
+                <div class="form-input-wrapper">
+                  <input id="field3" value="" type="text" name="company"  tabIndex="4" />
+                </div>
+              </div>
+
+              <div id="formElement6" class="sc-view form-design-field sc-static-layout sc-regular-size">
+                <label>Business Phone:</label>
+                <div class="form-input-wrapper">
+                  <input id="field6" value="" type="text" name="businessPhone"  tabIndex="7" />
+                </div>
+              </div>
+              
+              <div id="formElement4">
+                <label>Job Function: </label>
+                <div class="form_select formpadding">
+                  <select name="jobFunction">
+                    <option value="null">Please Select...</option>
+                    <option value="CEO/Owner">CEO/Owner</option>
+                    <option value="CMO/VP of Marketing">CMO/VP of Marketing</option>
+                    <option value="Marketing Director/Manager">Marketing Director/Manager</option>
+                    <option value="Marketing Associate">Marketing Associate</option>
+                    <option value="Agency Planner">Agency Planner</option>
+                    <option value="Agency Supervisor/Director">Agency Supervisor/Director</option>
+                    <option value="Agency VP">Agency VP</option><option value="Publisher">Publisher</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+              </div>
+
+              <div id="formElement5" class="sc-view form-design-field sc-static-layout sc-regular-size">
+                <label>State or Province:</label>
+                <div class="form-input-wrapper">
+                  <select id="field5" value="" name="stateOrProvince"  tabIndex="6">
+                    <option id="field5" value="" name="stateOrProvince" selected="selected" >Please Select...</option>
+                    <option id="field5" value="AK" name="stateOrProvince" >Alaska</option>
+                    <option id="field5" value="AL" name="stateOrProvince" >Alabama</option>
+                    <option id="field5" value="AR" name="stateOrProvince" >Arkansas</option>
+                    <option id="field5" value="AS" name="stateOrProvince" >American Samoa</option>
+                    <option id="field5" value="AZ" name="stateOrProvince" >Arizona</option>
+                    <option id="field5" value="CA" name="stateOrProvince" >California</option>
+                    <option id="field5" value="CO" name="stateOrProvince" >Colorado</option>
+                    <option id="field5" value="CT" name="stateOrProvince" >Connecticut</option>
+                    <option id="field5" value="DC" name="stateOrProvince" >D.C.</option>
+                    <option id="field5" value="DE" name="stateOrProvince" >Delaware</option>
+                    <option id="field5" value="FL" name="stateOrProvince" >Florida</option>
+                    <option id="field5" value="FM" name="stateOrProvince" >Micronesia</option>
+                    <option id="field5" value="GA" name="stateOrProvince" >Georgia</option>
+                    <option id="field5" value="GU" name="stateOrProvince" >Guam</option>
+                    <option id="field5" value="HI" name="stateOrProvince" >Hawaii</option>
+                    <option id="field5" value="IA" name="stateOrProvince" >Iowa</option>
+                    <option id="field5" value="ID" name="stateOrProvince" >Idaho</option>
+                    <option id="field5" value="IL" name="stateOrProvince" >Illinois</option>
+                    <option id="field5" value="IN" name="stateOrProvince" >Indiana</option>
+                    <option id="field5" value="KS" name="stateOrProvince" >Kansas</option>
+                    <option id="field5" value="KY" name="stateOrProvince" >Kentucky</option>
+                    <option id="field5" value="LA" name="stateOrProvince" >Louisiana</option>
+                    <option id="field5" value="MA" name="stateOrProvince" >Massachusetts</option>
+                    <option id="field5" value="MD" name="stateOrProvince" >Maryland</option>
+                    <option id="field5" value="ME" name="stateOrProvince" >Maine</option>
+                    <option id="field5" value="MH" name="stateOrProvince" >Marshall Islands</option>
+                    <option id="field5" value="MI" name="stateOrProvince" >Michigan</option>
+                    <option id="field5" value="MN" name="stateOrProvince" >Minnesota</option>
+                    <option id="field5" value="MO" name="stateOrProvince" >Missouri</option>
+                    <option id="field5" value="MP" name="stateOrProvince" >Marianas</option>
+                    <option id="field5" value="MS" name="stateOrProvince" >Mississippi</option>
+                    <option id="field5" value="MT" name="stateOrProvince" >Montana</option>
+                    <option id="field5" value="NC" name="stateOrProvince" >North Carolina</option>
+                    <option id="field5" value="ND" name="stateOrProvince" >North Dakota</option>
+                    <option id="field5" value="NE" name="stateOrProvince" >Nebraska</option>
+                    <option id="field5" value="NH" name="stateOrProvince" >New Hampshire</option>
+                    <option id="field5" value="NJ" name="stateOrProvince" >New Jersey</option>
+                    <option id="field5" value="NM" name="stateOrProvince" >New Mexico</option>
+                    <option id="field5" value="NV" name="stateOrProvince" >Nevada</option>
+                    <option id="field5" value="NY" name="stateOrProvince" >New York</option>
+                    <option id="field5" value="OH" name="stateOrProvince" >Ohio</option>
+                    <option id="field5" value="OK" name="stateOrProvince" >Oklahoma</option>
+                    <option id="field5" value="OR" name="stateOrProvince" >Oregon</option>
+                    <option id="field5" value="PA" name="stateOrProvince" >Pennsylvania</option>
+                    <option id="field5" value="PR" name="stateOrProvince" >Puerto Rico</option>
+                    <option id="field5" value="PW" name="stateOrProvince" >Palau</option>
+                    <option id="field5" value="RI" name="stateOrProvince" >Rhode Island</option>
+                    <option id="field5" value="SC" name="stateOrProvince" >South Carolina</option>
+                    <option id="field5" value="SD" name="stateOrProvince" >South Dakota</option>
+                    <option id="field5" value="TN" name="stateOrProvince" >Tennessee</option>
+                    <option id="field5" value="TX" name="stateOrProvince" >Texas</option>
+                    <option id="field5" value="UT" name="stateOrProvince" >Utah</option>
+                    <option id="field5" value="VA" name="stateOrProvince" >Virginia</option>
+                    <option id="field5" value="VI" name="stateOrProvince" >Virgin Islands</option>
+                    <option id="field5" value="VT" name="stateOrProvince" >Vermont</option>
+                    <option id="field5" value="WA" name="stateOrProvince" >Washington</option>
+                    <option id="field5" value="WI" name="stateOrProvince" >Wisconsin</option>
+                    <option id="field5" value="WV" name="stateOrProvince" >West Virginia</option>
+                    <option id="field5" value="WY" name="stateOrProvince" >Wyoming</option>
+                    <option id="field5" value="AA" name="stateOrProvince" >Military Americas</option>
+                    <option id="field5" value="AE" name="stateOrProvince" >Military Europe/ME/Canada</option>
+                    <option id="field5" value="AP" name="stateOrProvince" >Military Pacific</option>
+                    <option id="field5" value="AB" name="stateOrProvince" >Alberta</option>
+                    <option id="field5" value="MB" name="stateOrProvince" >Manitoba</option>
+                    <option id="field5" value="BC" name="stateOrProvince" >British Columbia</option>
+                    <option id="field5" value="NB" name="stateOrProvince" >New Brunswick</option>
+                    <option id="field5" value="NL" name="stateOrProvince" >Newfoundland and Labrador</option>
+                    <option id="field5" value="NS" name="stateOrProvince" >Nova Scotia</option>
+                    <option id="field5" value="NT" name="stateOrProvince" >Northwest Territories</option>
+                    <option id="field5" value="NU" name="stateOrProvince" >Nunavut</option>
+                    <option id="field5" value="ON" name="stateOrProvince" >Ontario</option>
+                    <option id="field5" value="PE" name="stateOrProvince" >Prince Edward Island</option>
+                    <option id="field5" value="QC" name="stateOrProvince" >Quebec</option>
+                    <option id="field5" value="SK" name="stateOrProvince" >Saskatchewan</option>
+                    <option id="field5" value="YT" name="stateOrProvince" >Yukon Territory</option>
+                  </select>
+                </div>
+              </div>
+      
+              <div id="formElement7" class="sc-view form-design-field sc-static-layout sc-regular-size">
+                <label>Company Size: </label>
+                <div class="form-input-wrapper">
+                  <select name="companySize" tabIndex="7">
+                    <option value="" selected="selected">Please Select...</option>
+                    <option value="1-49" >1-49 employees</option>
+                    <option value="50-99" >50-99 employees</option>
+                    <option value="100-249" >100-249 employees</option>
+                    <option value="250-499" >250-499 employees</option>
+                    <option value="500+" >500+ employees</option>
+                  </select>
+                </div>
+              </div>
+
+              <div id="formElement8" class="sc-view form-design-field sc-static-layout sc-regular-size">
+                <label>How may we help you?</label>
+                <div class="form-input-wrapper">
+                  <textarea id="field8" name="HowHelp"  tabIndex="9"></textarea>
+                </div>
+              </div>
+
+              <div id="formElement9" class="sc-view form-design-field sc-static-layout sc-regular-size">
+                <div class="form-input-wrapper">
+                  <input id="field9" value="Marketing - Contact Form" name="LeadSource" type="hidden"  />
+                </div>
+              </div>  
+            </form>
+        </div>
+        <div class="modal-footer">
+          <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+          <button class="btn btn-primary">Send to Bizo</button>
+        </div>
+      </div> <!-- end of modals -->
+    </div> <!-- Close viewport-->
+  </body>
+</html>
