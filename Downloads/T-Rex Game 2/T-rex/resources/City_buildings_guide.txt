@@ -1,0 +1,22 @@
+GUIDE TO CITY BUILDING TXT
+
+(1-21) CITY SET UPS ARE FOR TILE 1
+(22-25) AROUND PARK AREA
+(26-29) CORNERS OF PARK AREA
+
+b (1x1 bulding)
+B (2x2 building)
+
+
+Objects:
+
+P = person
+E = bench
+
+Following Objects:
+
+r = random
+
+30 IMPORTANT:
+
+LAST TILE PUTS OBJECTS IN INSTEAD

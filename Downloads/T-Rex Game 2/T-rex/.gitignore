@@ -1,0 +1,22 @@
+T-Rex
+
+# Mac garbage
+.*
+!.gitignore
+
+# c/c++ garbage 
+*.o
+
+# Model garbage
+*.mod
+
+# Executable
+a.out
+
+# emacs garbage
+*~
+
+bin/
+obj/
+
+test.cpp
