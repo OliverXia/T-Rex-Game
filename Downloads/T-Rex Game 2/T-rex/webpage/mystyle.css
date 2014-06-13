@@ -1,0 +1,26 @@
+h1{
+  text-align: center;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position:center; 
+  height: 600px; 
+  width: auto;
+}
+
+.featureSection {
+  padding: 20px;
+}
+
+.intro {
+  padding:50px;
+  background-color: rgba(48, 232, 12, 0.8);
+}
+
+.summary {
+  padding: 20px;
+  background-color: rgba(50, 232, 0, 0.4);
+}

@@ -725,7 +725,7 @@ void Game::UpdateHUD() {
 //meteor appears in the sky and gradually grows larger
 void Game::InitMeteor() {   
    meteorP = new ParticleSpawner();
-   meteorP->startParticles(glm::vec3(350.0f, 1200.0f, 0.0f), 5000, 4.5, 
+   meteorP->startParticles(glm::vec3(0.0f, 5.0, 0.0f), 5000, 2.5, 
 	           new Material( 0.2, 0.2, 0.8, 0.2, 0.2, 0.5, 0.2, 0.2, 0.5, 50.f), 
 	           glm::vec3(0.f, 1.f, 0.f), sHandler->getShader("particles"));
    float scaleM = 1.0f;

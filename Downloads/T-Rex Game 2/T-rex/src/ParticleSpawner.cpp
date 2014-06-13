@@ -78,7 +78,7 @@ void ParticleSpawner::updateParticles(int num){
          points[i].z += (float)rand() / (float)RAND_MAX;
          points[i].x += (float)rand() / (float)RAND_MAX;
          
-         if(points[i].y > position.y + 500.0 || points[i].x > position.x + 500.0 || points[i].x > position.z + 500.0)
+         if(points[i].y > position.y + 100.0 || points[i].x > position.x + 10.0 || points[i].x > position.z + 10.0)
             points[i] = position;
       }
    }   
